@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133F0DD4185C95F100FAC22E /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 133F0DD3185C95F100FAC22E /* SwipeView.m */; };
 		13F8098E1858BD07008C9080 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13F8098D1858BD07008C9080 /* city.plist */; };
 		13F809A41858C158008C9080 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F809911858C158008C9080 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		13F809A51858C158008C9080 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F809941858C158008C9080 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		133F0DD2185C95F100FAC22E /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
+		133F0DD3185C95F100FAC22E /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		13F8098D1858BD07008C9080 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		13F809901858C158008C9080 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		13F809911858C158008C9080 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				2794D60518585302003FA866 /* WeatherView.m */,
 				2794D638185B1A6F003FA866 /* SwipeButton.h */,
 				2794D639185B1A6F003FA866 /* SwipeButton.m */,
+				133F0DD2185C95F100FAC22E /* SwipeView.h */,
+				133F0DD3185C95F100FAC22E /* SwipeView.m */,
 				2794D6321859D519003FA866 /* DoubleColorView.h */,
 				2794D6331859D519003FA866 /* DoubleColorView.m */,
 				2794D60718585E4D003FA866 /* UIScreenEx.h */,
@@ -416,8 +421,9 @@
 		94483369185449F300584592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = EricssonLabs;
+				ORGANIZATIONNAME = Mobile_iOS;
 				TargetAttributes = {
 					94483391185449F300584592 = {
 						TestTargetID = 94483370185449F300584592;
@@ -478,6 +484,7 @@
 				13F809BA1858C989008C9080 /* NSObject+SBJSON.m in Sources */,
 				13F809A81858C158008C9080 /* ASIFormDataRequest.m in Sources */,
 				13F809A71858C158008C9080 /* ASIDownloadCache.m in Sources */,
+				133F0DD4185C95F100FAC22E /* SwipeView.m in Sources */,
 				2794D60618585302003FA866 /* WeatherView.m in Sources */,
 				944833AF18544CC800584592 /* NSString+ForJava.m in Sources */,
 				2794D63A185B1A6F003FA866 /* SwipeButton.m in Sources */,

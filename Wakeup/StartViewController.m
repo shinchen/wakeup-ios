@@ -14,6 +14,7 @@
 #import "Config.h"
 #import "DoubleColorView.h"
 #import "WeatherView.h"
+#import "SwipeView.h"
 
 // thirdparty
 #import "ASIHTTPRequest.h"
@@ -41,9 +42,11 @@
      CGRectMake(0, WEATHER_VIEW_TOP_MARGIN, appFrame.size.width, 102)];
 
     _timeLabel =
-    [[UILabel alloc] initWithFrame:
-     CGRectMake(40, _weatherView.frame.origin.y + _weatherView.frame.size.height + 10, 320, 120)];
-
+    [[UILabel alloc] initWithFrame:CGRectMake(40,
+                                              _weatherView.frame.origin.y +
+                                              _weatherView.frame.size.height + 10,
+                                              320,
+                                              120)];
     [_timeLabel setFont:[UIFont fontWithName:@"Roboto-Thin" size:100]];
     [_timeLabel setBackgroundColor:[UIColor clearColor]];
     [_timeLabel setTextAlignment:NSTextAlignmentLeft];
@@ -52,13 +55,12 @@
 
     _addClockButton = [[UIButton alloc] initWithFrame:
                        CGRectMake(80,
-                                  _timeLabel.frame.origin.y + _timeLabel.frame.size.height + 20,
+                                  _timeLabel.frame.origin.y +
+                                  _timeLabel.frame.size.height + 20,
                                   160,
                                   100)];
-    
     [_addClockButton setBackgroundImage:[UIImage imageNamed:@"addnew.png"]
                                forState:UIControlStateNormal];
-    
     [_addClockButton addTarget:self
                         action:@selector(addClock)
               forControlEvents:UIControlEventTouchUpInside];
@@ -66,17 +68,19 @@
     _bgImageView = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _bgImageView.image = [UIImage imageNamed:@"bg_blue.png"];
     
-    float doubleColorViewY = _addClockButton.frame.origin.y + _addClockButton.frame.size.height + 30;
-    _doubleColorView = [[DoubleColorView alloc] initWithFrame:CGRectMake(0,
-                                                                         doubleColorViewY,
-                                                                         appFrame.size.width,
-                                                                         60)];
+    float doubleColorViewY = _addClockButton.frame.origin.y +
+                             _addClockButton.frame.size.height + 30;
+    _doubleColorView = [[DoubleColorView alloc]
+                        initWithFrame:CGRectMake(0,doubleColorViewY,appFrame.size.width,60)];
 
     [self.view addSubview:_bgImageView];
     [self.view addSubview:_weatherView];
     [self.view addSubview:_timeLabel];
     [self.view addSubview:_addClockButton];
     [self.view addSubview:_doubleColorView];
+    
+    _swipeView = [[SwipeView alloc] initWithFrame:CGRectMake(0, _doubleColorView.frame.origin.y + _doubleColorView.frame.size.height + 20, appFrame.size.width, 40)];
+    [self.view addSubview:_swipeView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

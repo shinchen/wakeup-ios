@@ -2,11 +2,12 @@
 //  DoubleColorView.m
 //  Wakeup
 //
-//  Created by frost on 13-12-12.
+//  Created by shin on 13-12-12.
 //  Copyright (c) 2013年 EricssonLabs. All rights reserved.
 //
 
 #import "DoubleColorView.h"
+
 #import <math.h>
 #import "SwipeButton.h"
 
@@ -43,11 +44,13 @@
         
         
         [_leftNotifyImageView setFrame:CGRectMake(0, 0, LEFT_NOTIFY_WIDTH, frame.size.height)];
-        [_closeButton setFrame:CGRectMake(_leftNotifyImageView.frame.origin.x + _leftNotifyImageView.frame.size.width,
+        [_closeButton setFrame:CGRectMake(_leftNotifyImageView.frame.origin.x
+                                          + _leftNotifyImageView.frame.size.width,
                                           0,
                                           CLOSE_BTN_WIDTH,
                                           frame.size.height)];
-        [_modifyButton setFrame:CGRectMake(_leftNotifyImageView.frame.origin.x + _leftNotifyImageView.frame.size.width,
+        [_modifyButton setFrame:CGRectMake(_leftNotifyImageView.frame.origin.x
+                                           + _leftNotifyImageView.frame.size.width,
                                            0,
                                            320 - _leftNotifyImageView.frame.size.width,
                                            frame.size.height)];

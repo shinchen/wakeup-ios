@@ -2,7 +2,7 @@
 //  CityManager.m
 //  Wakeup
 //
-//  Created by frost on 13-12-12.
+//  Created by shin on 13-12-12.
 //  Copyright (c) 2013年 EricssonLabs. All rights reserved.
 //
 
@@ -26,7 +26,8 @@
 
 - (id)init {
     if (self = [super init]) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"plist"];
+        NSString *filePath =
+        [[NSBundle mainBundle] pathForResource:@"city" ofType:@"plist"];
         _cityDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
     }
     return self;

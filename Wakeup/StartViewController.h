@@ -11,6 +11,7 @@
 
 @class WeatherView;
 @class DoubleColorView;
+@class SwipeView;
 
 @interface StartViewController : UIViewController <CLLocationManagerDelegate>
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIButton *addClockButton;
 @property (nonatomic, strong) DoubleColorView *doubleColorView;
+@property (nonatomic, strong) SwipeView *swipeView;
 
 - (IBAction)addClock;
 

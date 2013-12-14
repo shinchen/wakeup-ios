@@ -26,12 +26,14 @@
         [self addSubview:_weatherLabel];
         
         [_weatherImageView setFrame:CGRectMake(30, 30, WEATHER_IMAGE_SIZE, WEATHER_IMAGE_SIZE)];
-        [_cityLabel setFrame:CGRectMake(_weatherImageView.frame.origin.x + _weatherImageView.frame.size.width + 2,
+        [_cityLabel setFrame:CGRectMake(_weatherImageView.frame.origin.x
+                                        + _weatherImageView.frame.size.width + 2,
                                         _weatherImageView.frame.origin.y,
                                         200,
                                         30)];
         [_weatherLabel setFrame:CGRectMake(_cityLabel.frame.origin.x,
-                                           _cityLabel.frame.origin.y + _cityLabel.frame.size.height + 2,
+                                           _cityLabel.frame.origin.y
+                                           + _cityLabel.frame.size.height + 2,
                                            200,
                                            30)];
         
